@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;;
+}
+
+::selection{
+    color: #000;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+   
+li {
+    list-style: none;
+}
+
+   /* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1b1b1b;
+    z-index: 12;
+    padding: 0 30px;
+    margin: auto;
+    width: 100%;
+    position: fixed;
+}
+
+.nav-links a {
+    color: #fff;
+
+}
+
+/* LOGO */
+.logo {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display:flex;
+    font-size: 18px;
+    max-width: 1250px;
+    gap: 0.5em;
+
+}
+
+.menu li a{
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 3px 6px;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+    background: #fff;
+    color: black;
+    border-radius: 5px;
+}
+
+.menu .icon {
+    display: none;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+} 
+   /*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+
+@media (max-width: 600px) {
+.menu { 
+     display:none;
+     position: absolute;
+     background-color:#1b1b1b;
+     right: 0;
+     left: 0;
+     text-align: center;
+     padding: 16px 0;
+     font-size: 16px;
+     line-height: 22px;
+    }
+
+input[type=checkbox]:checked ~ .menu{
+    display: block;
+   }
+.hamburger {
+    display: block;
+    color: #fff;
+   }
+}
+
+.img{
+    background: url('./background.png.jfif')no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.img::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.center{
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.center .title{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.center .sub_title{
+    color: #fff;
+    font-size: 44px;
+    font-weight: 600;
+}
+
+.center .btns{
+    margin-top: 20px;
+}
+
+.center .btns a{
+    height: 55px;
+    width: 150px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 8px;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.center .btns a:first-child{
+    color: #fff;
+    background: none;
+}
+
+.btns a:first-child:hover{
+    background: white;
+    color: black;
+}
+
+.center .btns a:last-child{
+    background: none;
+    color: #fff;
+}
+
+.btns a:last-child:hover{
+    background: white;
+    color: black;
+}
+
+.btns a{
+    text-decoration: none;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+  }
+div.foot {
+    position: absolute;
+    width: 100%;
+    bottom:15px;
+    color: #fff;
+    padding-left: 2px;
+}
